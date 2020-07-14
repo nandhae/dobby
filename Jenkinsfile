@@ -23,7 +23,7 @@ spec:
     }
 
     environment {
-        registry = "dineshba/endgame"
+        registry = "nandhagr8/dobby"
         registryCredential = 'dockerhub'
         dockerImage = ""
     }

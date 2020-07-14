@@ -16,7 +16,7 @@ spec:
         app: dobby
     spec:
       containers:
-      - image: dineshba/endgame:latest
+      - image: nandhagr8/dobby:latest
         imagePullPolicy: Always
         name: dobby
 ---
