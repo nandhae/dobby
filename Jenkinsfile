@@ -29,7 +29,7 @@ spec:
     }
 
     stages {
-        stage('Validations') {
+        stage('Lint') {
             steps {
                 container('golang') {
                     script {
@@ -38,7 +38,7 @@ spec:
                 }
             }
         }   
-        stage('Validations') {
+        stage('Tests') {
             steps {
                 container('golang') {
                     script {
