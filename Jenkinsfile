@@ -23,12 +23,21 @@ spec:
     }
 
     environment {
-        registry = "nandhagr8/dobby"
+        registry = "nandhanido/dobby"
         registryCredential = 'dockerhub'
         dockerImage = ""
     }
 
     stages {
+        stage('Validations') {
+            steps {
+                container('golang') {
+                    script {
+                        sh "make lint"
+                    }
+                }
+            }
+        }   
         stage('Validations') {
             steps {
                 container('golang') {
