@@ -28,16 +28,6 @@ spec:
         dockerImage = ""
     }
 
-    stages {
-        stage('Lint') {
-            steps {
-                container('golang') {
-                    script {
-                        sh "make lint"
-                    }
-                }
-            }
-        }   
         stage('Tests') {
             steps {
                 container('golang') {
