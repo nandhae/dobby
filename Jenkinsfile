@@ -28,6 +28,7 @@ spec:
         dockerImage = ""
     }
 
+    stages {
         stage('Tests') {
             steps {
                 container('golang') {
