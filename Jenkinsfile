@@ -29,6 +29,17 @@ spec:
     }
 
     stages {
+        stage('Lint') {
+            steps {
+                container('golang') {
+                    script {
+                        sh "go get -u golang.org/x/lint/golint"
+                        sh "make lint-all"
+                    }
+                }
+            }
+        }
+        
         stage('Tests') {
             steps {
                 container('golang') {
